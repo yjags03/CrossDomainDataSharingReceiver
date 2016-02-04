@@ -1,10 +1,26 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <title></title>
+    <title>Cross Domain Data Sharing</title>
 	<meta charset="utf-8" />
+    <script src="js/jquery-2.2.0.min.js"></script>
+    
+
+   
 </head>
 <body>
+
+    <div id="rdata">Here data comes</div>
+    <script>
+        $(document).ready(function () {
+            window.addEventListener('message', addData);
+
+            function addData(e) {
+                $("#rdata").text(e.data);
+            }
+
+        });
+    </script>
 
 </body>
 </html>
